@@ -41,9 +41,9 @@ char data[100];
 scanf("%s", data);
 int i =0;
 struct segel* stack = NULL;
-    while (data[i] != '(' || data[i] != '{' data[i] != '['){
+    while (data[i] != '(' || data[i] != '{' || data[i] != '['){
         pop(&stack, data[i]);
-        if (data[i] == '(' || data[i]== '{' data[i]== '['){
+        if (data[i] == '(' || data[i]== '{' || data[i]== '['){
             if (stack == NULL)
                 return 0;
             else if(sama(pop(&stack), data[i]))
